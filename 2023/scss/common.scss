@@ -41,7 +41,6 @@
     border-radius: 50%;
     animation: loadingRotate 1.5s infinite linear;
   }
-
 }
 @keyframes loadingRotate {
   0%{transform: rotate(0);}
@@ -664,6 +663,33 @@ body{
                     width: 100%;
                     .item{
                       cursor: pointer;
+                      width: 100%;
+                      position: relative;
+                      overflow: hidden;
+                      a{
+                        text-decoration: none;
+                          color: #fff;
+                          background-color: rgba(0,0,0,.6);
+                          width: 99%;
+                          display: block;
+                          text-align: center;
+                          line-height: 40px;
+                          font-size: 14px;
+                          position: absolute;
+                          bottom:-40px;
+                          transition: .3s;
+                          left: 0;
+                          z-index: 12;
+                      }
+                      &:hover{
+                        a{
+                          bottom:0;
+                          &:hover{
+                            text-decoration: underline;
+                          }
+                        }
+                      }
+                      
                       img{
                         width: 100%;
                       }

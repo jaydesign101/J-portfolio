@@ -360,7 +360,7 @@ $(document).ready(function () {
         if (currentIndex > 0) {
             currentIndex--;
             // slider.css("transform", "translateX(0)");
-            sliderWrapItem.animate({ left: -currentIndex * slideWidth - 10 }, 100);
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth}, 100);
             // console.log("currentIndex : " + currentIndex + ", slideCount : " + slideCount + ", left : " + -currentIndex * slideWidth)
             console.log(currentIndex)
             expItemCount();            
