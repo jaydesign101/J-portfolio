@@ -393,6 +393,60 @@ $(document).ready(function () {
         wheelNone = false;
     })
 
+    // 이미지 스와이프
+    sliderWrapItem.on("mousedown", handleSwipeStart);
+    sliderWrapItem.on("mousemove", handleSwipeMove);
+    sliderWrapItem.on("mouseup", handleSwipeEnd);
+    sliderWrapItem.on("mouseleave", handleSwipeEnd);
+    
+
+
+    let isSwiping = false;
+    let startPos = 0;
+    let offset = 0;
+    let slideWidth = $('#s5 .exp-items').width();
+    let changePoint = slideWidth / 4;
+
+    function handleSwipeStart(e){
+        isSwiping = true;
+        startPos = e.clientX || e.touches[0].clientX;
+        
+    }
+    
+    function handleSwipeMove(e){
+    if(isSwiping){
+        offset = (e.clientX || e.targetTouches[0].clientX) - startPos;
+        if(currentIndex == 0 && offset > 0){
+            console.log("!")
+            offset = 0;
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth - 10}, "none");
+        }else if(currentIndex+1 == slideCount && offset < 0){
+            offset = 0;
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth - 10}, "none");
+            console.log(slideCount + ", " + currentIndex)
+        }else{
+            console.log("애니메이션 시작")
+            console.log(slideCount + ", " + currentIndex)
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth + offset }, 0);
+        }
+    }
+    }
+    
+    function handleSwipeEnd(){
+        isSwiping = false;
+        if (changePoint < Math.abs(offset)) {
+            if (offset < 0) {
+                currentIndex++;
+            } else if (offset > 0 ) {
+                currentIndex--;
+            }
+            offset = 0;
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth}, 100);
+        } else {
+            sliderWrapItem.animate({ left: -currentIndex * slideWidth}, 100);
+        }
+    }
+
 
      /* #s6 *******************************/
     $("#s6 .name").hover(
