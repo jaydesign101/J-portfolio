@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "GowunBatang";
+  font-weight: 400;
+  src: url("./../font/GowunBatang-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("./../font/Pretendard-Regular.woff") format("woff");
+}
+

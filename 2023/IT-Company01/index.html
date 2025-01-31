@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Link Lodash : throttle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- Link ScrollMagic-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  
+  <!-- MINE -->
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/swiperJ.js"></script>
+
+</head>
+
+<body>
+  <!-- [s1] on-top : 언어 선택, 가맹점 -->
+  <!-- [s2] header : 로고, 메인메뉴 -->
+  <section class="header">
+
+    <h1 class="logo"><a href="index.html"><div class="logo-img"></div></a></h1>
+
+    <div class="container">
+      <div class="on-top">
+        <div class="select-lang">
+          <div class="select">
+              KOR
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="white" fill-opacity="0.6" d="M6.87206 7.26439L10.3443 10.8L13.8165 7.26439C13.8993 7.18003 13.9977 7.11311 14.1059 7.06745C14.2142 7.02179 14.3302 6.99829 14.4474 6.99829C14.5645 6.99829 14.6806 7.02179 14.7888 7.06745C14.8971 7.11311 14.9954 7.18003 15.0783 7.26439C15.1611 7.34875 15.2268 7.44891 15.2717 7.55914C15.3165 7.66936 15.3396 7.7875 15.3396 7.90681C15.3396 8.02612 15.3165 8.14426 15.2717 8.25449C15.2268 8.36471 15.1611 8.46487 15.0783 8.54923L10.9707 12.7318C10.8879 12.8163 10.7896 12.8833 10.6813 12.929C10.573 12.9748 10.457 12.9983 10.3398 12.9983C10.2226 12.9983 10.1065 12.9748 9.99827 12.929C9.89002 12.8833 9.79168 12.8163 9.70889 12.7318L5.60131 8.54923C5.51835 8.46493 5.45253 8.3648 5.40762 8.25456C5.36271 8.14433 5.3396 8.02615 5.3396 7.90681C5.3396 7.78747 5.36271 7.6693 5.40762 7.55906C5.45253 7.44883 5.51835 7.34869 5.60131 7.26439C5.95032 6.91812 6.52305 6.90901 6.87206 7.26439Z" />
+              </svg>
+                 
+          </div>
+          <ul class="lang-box">
+              <li><a href="#" onclick="showAlert()">ENG</a></li>
+              <li><a href="#" onclick="showAlert()">JAN</a></li>
+          </ul>
+        </div>
+        <div class="store" onclick="showAlert()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path  fill="black" d="M5.89897 6.25H18.101C18.5804 6.25 18.9726 5.85625 18.9726 5.375C18.9726 4.89375 18.5804 4.5 18.101 4.5H5.89897C5.41961 4.5 5.0274 4.89375 5.0274 5.375C5.0274 5.85625 5.41961 6.25 5.89897 6.25ZM19.1121 7.825C19.0336 7.4225 18.6763 7.125 18.2579 7.125H5.74209C5.32374 7.125 4.96639 7.4225 4.88795 7.825L4.01637 12.2C3.91178 12.7425 4.32142 13.25 4.87052 13.25H5.0274V17.625C5.0274 18.1063 5.41961 18.5 5.89897 18.5H12.8716C13.3509 18.5 13.7432 18.1063 13.7432 17.625V13.25H17.2295V17.625C17.2295 18.1063 17.6217 18.5 18.101 18.5C18.5804 18.5 18.9726 18.1063 18.9726 17.625V13.25H19.1295C19.6786 13.25 20.0882 12.7425 19.9836 12.2L19.1121 7.825ZM12 16.75H6.77055V13.25H12V16.75Z"/>
+          </svg>
+            가맹점
+        </div>
+      </div>
+      
+      <ul class="main-menu">
+          <li><a href="#" onclick="showAlert()">기업소개</a>
+              <ul class="sub-menu">
+                <li><a href="#" onclick="showAlert()">기업소개</a></li>
+                <li><a href="#" onclick="showAlert()">조직도</a></li>
+                <li><a href="#" onclick="showAlert()">연혁</a></li>
+                <li><a href="#" onclick="showAlert()">오시는 길</a></li>
+              </ul>
+          </li>
+          <li><a href="#" onclick="showAlert()">기술</a>
+            <ul class="sub-menu">
+              <li><a href="#" onclick="showAlert()">솔루션</a></li>
+              <li><a href="#" onclick="showAlert()">인프라 구축</a></li>
+              <li><a href="#" onclick="showAlert()">결제서비스</a></li>
+              <li><a href="#" onclick="showAlert()">웹호스팅</a></li>
+              <li><a href="#" onclick="showAlert()">유지보수</a></li>
+            </ul>
+          </li>
+        <li><a href="#" onclick="showAlert()">파트너스</a>
+          <ul class="sub-menu">
+            <li><a href="#" onclick="showAlert()">파트너스</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showAlert()">공지사항</a>
+          <ul class="sub-menu">
+            <li><a href="#" onclick="showAlert()">보도자료</a></li>
+            <li><a href="#" onclick="showAlert()">알림사항</a></li>
+            <li><a href="#" onclick="showAlert()">인재채용</a></li>
+          </ul>
+        </li>
+        <li><a href="#" onclick="showAlert()">고객센터</a>
+          <ul class="sub-menu">
+            <li><a href="#" onclick="showAlert()">FAQ</a></li>
+            <li><a href="#" onclick="showAlert()">문의하기</a></li>
+            <li><a href="#" onclick="showAlert()">블로그</a></li>
+            <li><a href="#" onclick="showAlert()">솔루션 신청</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    
+  </section>
+
+  
+
+  <!-- [s3] main-banner : 메인 배너 -->
+  <div class="mainbanner-back"></div>
+  <div class="swiper mainbanner">
+    <div class="gradient-updown"></div>
+    <div class="swiper-wrapper mainbanner">
+      <div class="swiper-slide mainbanner">
+        <div class="text">
+          <p class="top">Security Solution</p>
+          <h2>고객의 성장을 위해 최선을 <br/>
+            다하는 IT 전문 기업</h2>
+          <p class="bottom">고객의 니즈와 요구사항을 이해하고 고객의 가치를 창출합니다</p>
+        </div>
+        <div class="big-bg">
+            <div class="dim dim3 gradient-side"></div>
+            <video class="video" autoplay loop muted src="img/s3-big-bg01.mp4"></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide mainbanner">
+        <div class="text">
+          <p class="top">Artificial Intelligence Development</p>
+          <h2>변화하는 비즈니스 환경에 <br/>
+            제공하는 전문 솔루션</h2>
+          <p class="bottom">환경 변화에 따라 대응하고<br/> 최신 기술과 전문가의 노하우를 활용하여 맞춤형 솔루션을 제공합니다</p>
+        </div>
+        <div class="big-bg">
+            <div class="dim dim3 gradient-side"></div>
+            <video class="video" autoplay loop muted src="img/s3-big-bg02.mp4"></video>
+            <!-- <img src="img/s3-big-bg02.png" alt="메인 이미지2"> -->
+        </div>
+      </div>
+
+      <div class="swiper-slide mainbanner">
+        <div class="text">
+          <p class="top">Internet of Things Technology</p>
+          <h2>혁신과 열정으로 빛나는 JT</h2>
+          <p class="bottom">높은 기술력과 열정으로 <br>세상을 변화 시킬 제품 및 서비스를 제공힙니다</p>
+        </div>
+        <div class="big-bg">
+            <div class="dim dim3 gradient-side"></div>
+            <video class="video" autoplay loop muted src="img/s3-big-bg03.mp4"></video>
+            <!-- <img src="img/s3-big-bg03.png" alt="메인 이미지3"> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="pagination-wrap mainbanner">
+      <div class="swiper-pagination mainbanner"></div>
+    </div>
+    
+  </div>
+
+  <!-- [s4] main-foot : 이용 가맹점 수 누적 결제액 등등-->
+  <section>
+    <ul class="jt-info">
+      <li class="info1">
+        <span class="num">1,841</span>
+        <span class="unit">개</span>
+        <span class="plus">
+          <svg viewBox="0 0 12 12" width="10" height="10" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6238 6.85714H7.3381V11.1429C7.3381 11.3702 7.24779 11.5882 7.08705 11.7489C6.9263 11.9097 6.70829 12 6.48096 12C6.25363 12 6.03561 11.9097 5.87487 11.7489C5.71412 11.5882 5.62381 11.3702 5.62381 11.1429V6.85714H1.3381C1.11077 6.85714 0.892754 6.76684 0.732009 6.60609C0.571263 6.44535 0.480957 6.22733 0.480957 6C0.480957 5.77267 0.571263 5.55465 0.732009 5.39391C0.892754 5.23316 1.11077 5.14286 1.3381 5.14286H5.62381V0.857143C5.62381 0.629814 5.71412 0.411797 5.87487 0.251051C6.03561 0.0903056 6.25363 0 6.48096 0C6.70829 0 6.9263 0.0903056 7.08705 0.251051C7.24779 0.411797 7.3381 0.629814 7.3381 0.857143V5.14286H11.6238C11.8511 5.14286 12.0692 5.23316 12.2299 5.39391C12.3907 5.55465 12.481 5.77267 12.481 6C12.481 6.22733 12.3907 6.44535 12.2299 6.60609C12.0692 6.76684 11.8511 6.85714 11.6238 6.85714Z" fill="white"/>
+          </svg>         
+        </span>
+        <p class="description">이용 가맹점수</p>
+      </li>
+      <li class="info2">
+        <span class="num">3,273</span>
+        <span class="unit">만</span>
+        <span class="plus">
+          <svg viewBox="0 0 12 12" width="10" height="10" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6238 6.85714H7.3381V11.1429C7.3381 11.3702 7.24779 11.5882 7.08705 11.7489C6.9263 11.9097 6.70829 12 6.48096 12C6.25363 12 6.03561 11.9097 5.87487 11.7489C5.71412 11.5882 5.62381 11.3702 5.62381 11.1429V6.85714H1.3381C1.11077 6.85714 0.892754 6.76684 0.732009 6.60609C0.571263 6.44535 0.480957 6.22733 0.480957 6C0.480957 5.77267 0.571263 5.55465 0.732009 5.39391C0.892754 5.23316 1.11077 5.14286 1.3381 5.14286H5.62381V0.857143C5.62381 0.629814 5.71412 0.411797 5.87487 0.251051C6.03561 0.0903056 6.25363 0 6.48096 0C6.70829 0 6.9263 0.0903056 7.08705 0.251051C7.24779 0.411797 7.3381 0.629814 7.3381 0.857143V5.14286H11.6238C11.8511 5.14286 12.0692 5.23316 12.2299 5.39391C12.3907 5.55465 12.481 5.77267 12.481 6C12.481 6.22733 12.3907 6.44535 12.2299 6.60609C12.0692 6.76684 11.8511 6.85714 11.6238 6.85714Z" fill="white"/>
+          </svg>         
+        </span>
+        <p class="description">누적 결제액</p>
+      </li>
+      <li class="info3">
+        <span class="num">1,879</span>
+        <span class="unit">개</span>
+        <span class="plus">
+          <svg viewBox="0 0 12 12" width="10" height="10" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6238 6.85714H7.3381V11.1429C7.3381 11.3702 7.24779 11.5882 7.08705 11.7489C6.9263 11.9097 6.70829 12 6.48096 12C6.25363 12 6.03561 11.9097 5.87487 11.7489C5.71412 11.5882 5.62381 11.3702 5.62381 11.1429V6.85714H1.3381C1.11077 6.85714 0.892754 6.76684 0.732009 6.60609C0.571263 6.44535 0.480957 6.22733 0.480957 6C0.480957 5.77267 0.571263 5.55465 0.732009 5.39391C0.892754 5.23316 1.11077 5.14286 1.3381 5.14286H5.62381V0.857143C5.62381 0.629814 5.71412 0.411797 5.87487 0.251051C6.03561 0.0903056 6.25363 0 6.48096 0C6.70829 0 6.9263 0.0903056 7.08705 0.251051C7.24779 0.411797 7.3381 0.629814 7.3381 0.857143V5.14286H11.6238C11.8511 5.14286 12.0692 5.23316 12.2299 5.39391C12.3907 5.55465 12.481 5.77267 12.481 6C12.481 6.22733 12.3907 6.44535 12.2299 6.60609C12.0692 6.76684 11.8511 6.85714 11.6238 6.85714Z" fill="white"/>
+          </svg>         
+        </span>
+        <p class="description">관리 HW 수</p>
+      </li>
+      <li class="info4">
+        <span class="num">20</span>
+        <span class="unit">연차</span>
+        <span class="plus">
+          <svg viewBox="0 0 12 12" width="10" height="10" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6238 6.85714H7.3381V11.1429C7.3381 11.3702 7.24779 11.5882 7.08705 11.7489C6.9263 11.9097 6.70829 12 6.48096 12C6.25363 12 6.03561 11.9097 5.87487 11.7489C5.71412 11.5882 5.62381 11.3702 5.62381 11.1429V6.85714H1.3381C1.11077 6.85714 0.892754 6.76684 0.732009 6.60609C0.571263 6.44535 0.480957 6.22733 0.480957 6C0.480957 5.77267 0.571263 5.55465 0.732009 5.39391C0.892754 5.23316 1.11077 5.14286 1.3381 5.14286H5.62381V0.857143C5.62381 0.629814 5.71412 0.411797 5.87487 0.251051C6.03561 0.0903056 6.25363 0 6.48096 0C6.70829 0 6.9263 0.0903056 7.08705 0.251051C7.24779 0.411797 7.3381 0.629814 7.3381 0.857143V5.14286H11.6238C11.8511 5.14286 12.0692 5.23316 12.2299 5.39391C12.3907 5.55465 12.481 5.77267 12.481 6C12.481 6.22733 12.3907 6.44535 12.2299 6.60609C12.0692 6.76684 11.8511 6.85714 11.6238 6.85714Z" fill="white"/>
+          </svg>         
+        </span>
+        <p class="description">최고 기술력 보유 기업</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- [s5] major sills : 메이저 스킬-->
+  <section class="skills">
+    <div class="round"></div>
+    
+    <div class="view-wrap">
+      <div class="scroll-spy">
+        <h3 class="h3 back-to-position to-slow delay-0">major skill</h3>
+      </div>
+      
+      <div class="design-text dt-ski">SKI</div>
+      <div class="design-text dt-lls">LLS</div>
+
+
+      <ul class="skill scroll-spy">
+        <li class="back-to-position to-down delay-0">
+          <a href="#" onclick="showAlert()">
+            <div class="text">
+              <h4>CRM (고객 관리)
+                <p>Customer Relationship Management</p>
+              </h4>
+              <div class="description">
+                <p>고객과의 상호작용과 관련된 데이터를 수집, 분석하여 고객과의 관계를 개선하고, 고객 만족도를 높이며, 이로 인한 매출 증대를 목적으로 하는 전략적인 프로세스를 개발합니다.</p>
+              </div>
+            </div>  
+          </a>
+        </li>
+        <li class="back-to-position to-down delay-1">
+          <a href="#" onclick="showAlert()">
+            <div class="text">
+              <h4>결제 서비스
+                <p>Payment / VAN / PG Service</p>
+              </h4>
+              <div class="description">
+                <p>신뢰성과 안정성을 바탕으로 빠르고 간편한 결제를 제공합니다. 다양한 결제 수단을 지원하여 사용자들에게 편의성을 제공하며, 빠른 결제 처리 속도로 고객 만족도를 높입니다.</p>
+              </div>
+            </div>  
+          </a>
+        </li>
+        <li class="back-to-position to-down delay-2">
+          <a href="#" onclick="showAlert()">
+            <div class="text">
+              <h4>유지보수
+                <p>System Management</p>
+              </h4>
+              <div class="description">
+                <p>제품 라이프 사이클에서 중요한 부분을 차지하며, 제품이 안정적으로 운영되도록 지속적으로 관리합니다.</p>
+              </div>
+            </div>  
+          </a>
+        </li>
+        <li class="back-to-position to-down delay-3">
+          <a href="#" onclick="showAlert()">
+            <div class="text">
+              <h4>웹 호스팅
+                <p>Web Hpsting</p>
+              </h4>
+              <div class="description">
+                <p>안정적인 서버 환경과 빠른 속도를 보장하여 고객의 웹 사이트가 항상 원활하게 운영될 수 있도록 돕습니다. 백업과 보안 시스템을 강화하여 고객의 데이터가 안전하게 보호됩니다. 특히, 기업의 요구사항에 맞게 선택할 수 있는 다양한 호스팅 플랜과 24시간 고객지원 서비스를 제공하여 고객이 항상 만족할 수 있도록 노력하고, 호스팅 서비스에 따라 추가 기능과 도구들을 제공하여 고객의 비즈니스 성장을 지원합니다.</p>
+              </div>
+            </div>  
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-container scroll-spy">
+      <a class="btn btn--trans back-to-position to-slow" href="#" onclick="showAlert()"> 더 자세히 보기
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+        </svg>
+      </a>   
+    </div>
+  </section>
+
+  <!-- [s6] always provide : 비즈니스-->
+  <section class="business">
+    <div class="view-wrap">
+      <div class="design-text dt-business">BUSINESS</div>
+      <div class="scroll-spy">
+        <h3 class="h3 h3--black back-to-position to-slow delay-0">always provide</h3>
+      </div>
+      <div class="content scroll-spy">
+        <div class="business-img back-to-position to-right delay-0"></div>
+        <div class="business-text back-to-position to-left delay-1">
+          <div>
+            <div class="num">Business1</div>
+            <div class="title">끊임없는 발전</div>
+            <div class="description">JT는 끊임없는 발전을 목표로 하기 위해 R&D부서를 개설하여<br/>
+              전문성과 열정으로 새로운 도전을 시도하고 있습니다. <br/>
+              끊임없이 발전하는 기업으로서<br/>
+              고객에게 더욱 높은 가치를 제공하고자 노력하고 있습니다
+            </div>
+            <div class="btn-container" >
+              <a class="btn btn--trans" href="#" onclick="showAlert()">R&D 부서 상세보기
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content scroll-spy">
+        
+        <div class="business-text back-to-position to-right delay-0">
+        <div>
+          <div class="num">Business2</div>
+          <div class="title">안정적인 네트워크와 기술</div>
+          <div class="description">JT는 안정적인 네트워크와 첨단 기술을 활용하여 <br/>
+            고객의 요구에 부합하는 다양한 서비스를 제공합니다. <br/>
+            항상 최신 기술과 보안 시스템을 적용하여 안전하고 신뢰성 있는 <br/>
+            서비스를 제공하며 고객의 만족을 최우선으로 생각합니다.<br/>
+          </div>
+          <div class="btn-container">
+            <a class="btn btn--trans" href="#" onclick="showAlert()">JT 기술 보기
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        </div>
+        <div class="business-img back-to-position to-left delay-1"></div>
+      </div>
+      <div class="content scroll-spy">
+        <div class="business-img back-to-position to-right delay-0"></div>
+        <div class="business-text back-to-position to-left delay-1">
+        <div>
+          <div class="num">Business3</div>
+          <div class="title">고객 중심 서비스</div>
+          <div class="description">우리 회사는 항상 고객 만족을 최우선으로 생각합니다. <br/>
+            고객의 요구에 신속하고 정확하게 대응하기 위해  <br/>
+            24시간 콜센터를 운영합니다.<br/>
+            친절하고 전문성 있는 서비스를 제공하여 고객의 만족도를 <br/>
+            높이고 있습니다.<br/>
+          </div>
+          <div class="btn-container">
+            <a class="btn btn--trans" href="#" onclick="showAlert()">24시간 고객센터
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- [s7] bulid : 사례-->
+  <section class="bulid">
+    <div class="design-text dt-wemake ">WE MAKE EVERYTHING IN IT</div>
+    <div class="round"></div>
+    <div class="view-wrap">
+      <div class="scroll-spy">
+        <h3 class="h3 h3--black back-to-position to-slow">what are we going to build</h3>
+      </div>
+      <div class="container scroll-spy">
+        <div class="item back-to-position to-down delay-0">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">WowGraphic</div>
+            <div class="title">WowGraphic Server 구축</div>
+            <div class="tag">#Infra&nbsp;&nbsp;&nbsp;#Server</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-1">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">알로하 뷰티</div>
+            <div class="title">국내 최대 쇼핑몰 알로하 뷰티 SM</div>
+            <div class="tag">#SM&nbsp;&nbsp;&nbsp;#Back office</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-2">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">JT Solution</div>
+            <div class="title">JT CRM Mobile Ver 개발</div>
+            <div class="tag">#CRM&nbsp;&nbsp;&nbsp;#JT Solution</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-3">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">김포 공항</div>
+            <div class="title">공항 안내 Robot 개발</div>
+            <div class="tag">#Robot&nbsp;&nbsp;&nbsp;#Airport&nbsp;&nbsp;&nbsp;#with AI Company</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-4">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">PPP Mart</div>
+            <div class="title">영업관리시스템 개발</div>
+            <div class="tag">#Develope&nbsp;&nbsp;&nbsp;#PRM</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-5">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">나우대학교</div>
+            <div class="title">University Internet 설치</div>
+            <div class="tag">#Infra&nbsp;&nbsp;&nbsp;#Internet</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-6">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">JT Web Hosting</div>
+            <div class="title">JT Web Hosting Service 제공</div>
+            <div class="tag">#Hosting&nbsp;&nbsp;&nbsp;#이용자 500만명&nbsp;&nbsp;&nbsp;#JT Solution</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-7">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">가베 커피</div>
+            <div class="title">음료 제조 Robot 개발</div>
+            <div class="tag">#Robot&nbsp;&nbsp;&nbsp;#Coffee&nbsp;&nbsp;&nbsp;#with AI Company</div>
+          </div>
+        </div>
+
+        <div class="item back-to-position to-down delay-8">
+          <div class="build-img-wrap">
+            <div class="bulid-img"></div>
+          </div>
+          <div class="text">
+            <div class="company">서운역</div>
+            <div class="title">서운역 Smart ATM 설치</div>
+            <div class="tag">#ATM&nbsp;&nbsp;&nbsp;#본인인증 가능</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="btn-container scroll-spy" >
+      <a class="btn btn--trans back-to-position to-slow" href="#" onclick="showAlert()">더 자세히 보기
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- [s8] news : 뉴스-->
+  <section class="news ">
+    <div class="dim dim6 gradient-side"></div>
+    <div class="view-wrap scroll-spy">
+      <div class="left back-to-position to-right">
+        <div class="h3">news</div>
+        <div class="text">
+          JT의 새로운 공지와 <br/>
+          다양한 뉴스를 <br/>
+          확인해보세요<br/>
+        </div>
+        <div class="btn-container" href="#" onclick="showAlert()">
+          <div class="btn btn--white">더 자세히 보기 
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+            </svg>
+          </div>   
+        </div>
+      </div>
+
+      <div class="swiper news-right back-to-position to-left">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+              <div class="top">
+                <div class="top-icon icon-news"></div>
+                <div class="top-date">2023.04.31</div>
+              </div>
+            <a href="#" onclick="showAlert()">
+              <div class="content">
+                <div class="title">JT, AI를 활용한 <br/>새로운 서비스 출시</div>
+                <div class="description">JT에서는 최근 AI 기술을 활용한 새로운 서비스를 출시하였습니다.<br/> 
+                  이번 서비스는 인공지능 기술을 활용하여 사용자들의 데이터를 분석하고, 맞춤형 광고를 제공하는 것입니다. <br/> 
+                  이를 통해 광고주는 보다 정확한 타겟팅을 할 수 있으며, 사용자는 보다 유용한 광고를 제공받을 수 있게 되었습니다.
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="top">
+              <div class="top-icon icon-notice"></div>
+              <div class="top-date">2023.04.24</div>
+            </div>
+          <a href="#" onclick="showAlert()">
+            <div class="content">
+              <div class="title">보안 업데이트를 위한 <br/>JT Solution 2.0 점검 안내</div>
+              <div class="description">안녕하세요, 고객님의 개인정보 보호를 위해 더욱 강화된 보안 시스템을 도입하였습니다. 보안 시스템 업데이트로 인해 2023년 3월 28일 오전 1시부터 28일 오전 6시까지 서비스 접속이 불가하오니, 유의 부탁드립니다.
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="top">
+              <div class="top-icon icon-news"></div>
+              <div class="top-date">2023.03.23</div>
+            </div>
+          <a href="#" onclick="showAlert()">
+            <div class="content">
+              <div class="title">JT, AI COMPANY NOW과 협업 체결</div>
+              <div class="description">JT은 최근 NOW과 인프라 분야에서의 협업을 체결했다고 밝혔습니다. <br/>
+                이번 협업은 JT의 클라우드 인프라 기술과 NOW의 보안 기술을 결합하여, 보다 안전하고 안정적인 클라우드 서비스를 제공하는 것을 목표로 하고 있습니다.<br/>
+                JT 관계자는 "이번 협업을 통해 우리는 기존에 보유하고 있는 클라우드 인프라 기술을 보완하고, 보다 안전하고 안정적인 클라우드 서비스를 제공할 수 있게 될 것입니다"라며 
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="top">
+              <div class="top-icon icon-notice"></div>
+              <div class="top-date">2023.03.02</div>
+            </div>
+          <a href="#" onclick="showAlert()">
+            <div class="content">
+              <div class="title">JT Solution 2.0 신규 오픈 및 이벤트</div>
+              <div class="description">안녕하세요.
+                저희는 최근에 JT Solution을 공식적으로 오픈하게 되어 매우 기쁩니다. <br/>
+                JT Solution은 우리 기업이 개발한 Solution 분야에서의 혁신적인 솔루션으로, 고객들에게 많은 관심을 받고 있는 제품입니다. <br/>
+                JT Solution은 고객들의 다양한 요구에 맞춰 개발된 맞춤형 서비스로, 우리 기업만의 기술력과 노하우를 담아 고객들의 비즈니스 성과를
+              </div>
+            </div>
+          </a>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="top">
+              <div class="top-icon icon-notice"></div>
+              <div class="top-date">2023.02.20</div>
+            </div>
+          <a href="#" onclick="showAlert()">
+            <div class="content">
+              <div class="title">JT, 2023년 상반기 <br/> 신규 채용 실시</div>
+              <div class="description">저희 회사에서는 지속적인 성장을 위해 새로운 인재를 모시고 있습니다. 
+                현재 우리 회사에서는 분야에서 열정과 역량을 갖춘 인재를 찾고 있습니다.
+                우리 회사에서는 다양한 경력과 실력을 갖춘 인재를 찾고 있습니다. 또한, 대학원생과 신입사원에게도 기회를 제공하며, 지원자들에게는 실력과 열정에 따라 적절한 대우와 기회를 제공할 것...
+              </div>
+            </div>
+          </a>
+          </div>   
+          
+        </div>
+        <div class="custom">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-btn">
+            <div class="swiper-button-prev">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.4375 5.4375C10.6791 5.67912 10.6791 6.07088 10.4375 6.3125L7.375 9.375H14.375C14.7202 9.375 15 9.65482 15 10C15 10.3452 14.7202 10.625 14.375 10.625H7.375L10.4375 13.6875C10.6791 13.9291 10.6791 14.3209 10.4375 14.5625C10.1959 14.8041 9.80412 14.8041 9.5625 14.5625L5.70711 10.7071C5.31658 10.3166 5.31658 9.68342 5.70711 9.29289L9.5625 5.4375C9.80412 5.19587 10.1959 5.19588 10.4375 5.4375Z" fill="white"/>
+                </svg>              
+            </div>
+            <div class="swiper-button-next">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5625 5.4375C9.32088 5.67912 9.32088 6.07088 9.5625 6.3125L12.625 9.375H5.625C5.27982 9.375 5 9.65482 5 10C5 10.3452 5.27982 10.625 5.625 10.625H12.625L9.5625 13.6875C9.32088 13.9291 9.32088 14.3209 9.5625 14.5625C9.80412 14.8041 10.1959 14.8041 10.4375 14.5625L14.2929 10.7071C14.6834 10.3166 14.6834 9.68342 14.2929 9.29289L10.4375 5.4375C10.1959 5.19587 9.80412 5.19588 9.5625 5.4375Z" fill="white"/>
+                </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [s9] 인재채용, 문의하기 -->
+  <section class="sec9">
+    <div class="sec9-wrap scroll-spy">
+
+      <div class="employ">
+        <div class="content back-to-position to-right">
+          <div class="title">인재 채용</div>
+          <div class="description">여러분의 역량, 우리와 함께 발전시켜보세요! 지금 지원하세요.</div>
+          <div class="btn-container">
+            <a class="btn btn--white" href="#" onclick="showAlert()"> 더 자세히 보기
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+              </svg>
+            </a>   
+          </div>
+        </div>
+        <div class="dim dim6 gradient-side"></div>
+      </div>
+
+      <div class="inquiry">
+        <div class="content back-to-position to-left">
+          <div class="title">문의하기</div>
+          <div class="description">궁금한 사항이 있으시면 언제든지 문의해주세요</div>
+          <div class="btn-container">
+            <a class="btn btn--white" href="#" onclick="showAlert()"> 더 자세히 보기
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.57129 5.9375C8.32966 6.17912 8.32966 6.57088 8.57129 6.8125L11.6338 9.875H4.63379C4.28861 9.875 4.00879 10.1548 4.00879 10.5C4.00879 10.8452 4.28861 11.125 4.63379 11.125H11.6338L8.57129 14.1875C8.32966 14.4291 8.32966 14.8209 8.57129 15.0625C8.81291 15.3041 9.20466 15.3041 9.44629 15.0625L13.3017 11.2071C13.6922 10.8166 13.6922 10.1834 13.3017 9.79289L9.44629 5.9375C9.20466 5.69587 8.81291 5.69588 8.57129 5.9375Z"/>
+              </svg>
+            </a>   
+          </div>
+        </div>
+        <div class="dim dim6 gradient-side"></div>
+      </div> 
+    </div>
+  </section>
+
+  <!-- [s10] 조직도 및 푸터 -->
+  <section class="footer">
+    <div class="view-wrap">
+      <ul class="foot1">
+        <li><a href="#" onclick="showAlert()">개인정보처리방침</a></li>
+        <li><a href="#" onclick="showAlert()">이메일 무단수집 거부</a></li>
+        <li><a href="#" onclick="showAlert()">오시는 길</a></li>
+        <li><a href="#" onclick="showAlert()">이용약관</a></li>
+      </ul>
+    </div>
+    <!-- <div class="line"></div> -->
+    <div class="foot2">
+      <div class="view-wrap">
+         <div class="logo"></div>
+         <ul class="info">
+          <li>서울시 재림구 벚꽃나무로 199 JT 빌딩</li>
+          <li>사업자등록번호 123-45-67891</li>
+          <li>대표 전화 070-1234-5678</li>
+          <li>대표 이메일 jttechnology@jttechnology.com</li>
+         </ul>
+         <ul class="sns">
+            <li>
+                <a href="#" onclick="showAlert()"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#C3C3C3" fill-rule="evenodd" clip-rule="evenodd" d="M7 7.5C5.89543 7.5 5 8.39543 5 9.5V15.5C5 16.6046 5.89543 17.5 7 17.5H17C18.1046 17.5 19 16.6046 19 15.5V9.5C19 8.39543 18.1046 7.5 17 7.5H7ZM14.64 12.7078C14.8 12.6155 14.8 12.3845 14.64 12.2922L10.86 10.1098C10.7 10.0174 10.5 10.1329 10.5 10.3176V14.6824C10.5 14.8671 10.7 14.9826 10.86 14.8902L14.64 12.7078Z" />
+                </svg></a>
+            </li>
+            <li>
+              <a href="#" onclick="showAlert()"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 19.4824C16.1326 19.226 19 16.1979 19 12.5C19 8.63401 15.866 5.5 12 5.5C8.13401 5.5 5 8.63401 5 12.5C5 15.8305 7.32591 18.6177 10.442 19.326V13.284H9.392V11.758L10.442 11.683V11.03C10.442 9.406 11.212 8.146 13.172 8.146C13.788 8.146 14.32 8.272 14.67 8.398L14.278 9.938C14.012 9.826 13.718 9.756 13.452 9.756C12.836 9.756 12.5 10.134 12.5 11.002V11.674H13.984V13.284H12.5V19.4824Z" fill="#C3C3C3"/>
+                </svg></a>
+            </li>
+            <li>
+              <a href="#" onclick="showAlert()"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.37508 12.3596C7.32635 12.2316 7.30199 12.0816 7.30199 11.9096C7.30199 11.7377 7.32635 11.5884 7.37508 11.4616C7.4238 11.3348 7.49368 11.2369 7.58471 11.1679C7.67703 11.0989 7.78986 11.0644 7.9232 11.0644C8.05783 11.0644 8.1713 11.1002 8.26362 11.1717C8.35593 11.2432 8.42581 11.3424 8.47325 11.4691C8.52069 11.5959 8.54441 11.7427 8.54441 11.9096C8.54441 12.0778 8.52005 12.2265 8.47133 12.3558C8.42389 12.4838 8.35401 12.5842 8.26169 12.657C8.16938 12.7285 8.05655 12.7643 7.9232 12.7643C7.79114 12.7643 7.67895 12.7292 7.58663 12.6589C7.49432 12.5873 7.4238 12.4876 7.37508 12.3596Z" fill="#C3C3C3"/>
+                <path d="M12.7419 12.7907C12.8778 12.7907 12.9913 12.753 13.0823 12.6777C13.1733 12.6012 13.2419 12.497 13.2881 12.3652C13.3355 12.2334 13.3593 12.0835 13.3593 11.9153C13.3593 11.7471 13.3355 11.5971 13.2881 11.4654C13.2419 11.3336 13.1733 11.2294 13.0823 11.1529C12.9913 11.0763 12.8778 11.038 12.7419 11.038C12.6047 11.038 12.4893 11.0763 12.3957 11.1529C12.3034 11.2294 12.2335 11.3336 12.1861 11.4654C12.1399 11.5971 12.1168 11.7471 12.1168 11.9153C12.1168 12.0835 12.1399 12.2334 12.1861 12.3652C12.2335 12.497 12.3034 12.6012 12.3957 12.6777C12.4893 12.753 12.6047 12.7907 12.7419 12.7907Z" fill="#C3C3C3"/>
+                <path d="M16.4076 12.6156C16.3166 12.6796 16.205 12.7116 16.073 12.7116C15.9383 12.7116 15.8249 12.679 15.7325 12.6137C15.6415 12.5472 15.5716 12.4537 15.5229 12.3332C15.4755 12.2115 15.4517 12.0671 15.4517 11.9002C15.4517 11.7358 15.4755 11.5909 15.5229 11.4654C15.5703 11.3399 15.6402 11.242 15.7325 11.1717C15.8249 11.1002 15.9383 11.0644 16.073 11.0644C16.205 11.0644 16.3172 11.0989 16.4095 11.1679C16.5018 11.2369 16.5724 11.3342 16.6211 11.4597C16.6698 11.584 16.6942 11.7308 16.6942 11.9002C16.6942 12.0697 16.6692 12.2152 16.6192 12.337C16.5704 12.4575 16.4999 12.5503 16.4076 12.6156Z" fill="#C3C3C3"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 8.5C5 7.39543 5.89543 6.5 7 6.5H17C18.1046 6.5 19 7.39543 19 8.5V14.5C19 15.6046 18.1046 16.5 17 16.5H13.3333L12 18.5L10.6667 16.5H7C5.89543 16.5 5 15.6046 5 14.5V8.5ZM6.5 9.5V13.3554H7.30776V12.8923H7.3443C7.38149 12.9726 7.43534 13.0523 7.50586 13.1314C7.57638 13.2092 7.66677 13.2738 7.77703 13.3253C7.88858 13.3768 8.02385 13.4025 8.18284 13.4025C8.40722 13.4025 8.6098 13.346 8.79058 13.2331C8.97265 13.1189 9.11625 12.9513 9.22139 12.7304C9.32781 12.5083 9.38102 12.2359 9.38102 11.9134C9.38102 11.5821 9.32653 11.3066 9.21755 11.087C9.10856 10.8661 8.96304 10.7011 8.78097 10.5919C8.5989 10.4814 8.40017 10.4262 8.18476 10.4262C8.01936 10.4262 7.88089 10.4538 7.76934 10.509C7.65908 10.563 7.56932 10.6308 7.50009 10.7123C7.43213 10.7927 7.38021 10.8717 7.3443 10.9495H7.3193V9.5H6.5ZM10.747 13.3554V9.5H9.9277V13.3554H10.747ZM12.738 13.4119C12.4393 13.4119 12.1809 13.3498 11.963 13.2255C11.7463 13.1 11.579 12.9256 11.461 12.7022C11.3431 12.4775 11.2841 12.2171 11.2841 11.9209C11.2841 11.6222 11.3431 11.3612 11.461 11.1378C11.579 10.9132 11.7463 10.7387 11.963 10.6145C12.1809 10.489 12.4393 10.4262 12.738 10.4262C13.0368 10.4262 13.2945 10.489 13.5112 10.6145C13.7292 10.7387 13.8971 10.9132 14.0151 11.1378C14.133 11.3612 14.192 11.6222 14.192 11.9209C14.192 12.2171 14.133 12.4775 14.0151 12.7022C13.8971 12.9256 13.7292 13.1 13.5112 13.2255C13.2945 13.3498 13.0368 13.4119 12.738 13.4119ZM15.3729 14.3927C15.5627 14.4642 15.7902 14.5 16.0556 14.5C16.3377 14.5 16.5871 14.458 16.8038 14.3739C17.0218 14.291 17.1923 14.1668 17.3154 14.0011C17.4385 13.8355 17.5 13.6296 17.5 13.3837V10.4639H16.6865V10.9495H16.6557C16.6185 10.8717 16.5653 10.7927 16.4961 10.7123C16.4281 10.6308 16.3384 10.563 16.2268 10.509C16.1153 10.4538 15.9768 10.4262 15.8114 10.4262C15.5947 10.4262 15.3953 10.4808 15.2133 10.59C15.0325 10.6992 14.8876 10.8636 14.7786 11.0832C14.6696 11.3028 14.6151 11.5764 14.6151 11.904C14.6151 12.224 14.6683 12.4888 14.7748 12.6984C14.8825 12.9068 15.0267 13.0617 15.2075 13.1634C15.3896 13.2638 15.5915 13.314 15.8133 13.314C15.9697 13.314 16.1044 13.2914 16.2172 13.2462C16.33 13.2011 16.4223 13.1427 16.4941 13.0712C16.5659 12.9996 16.6198 12.9237 16.6557 12.8434H16.6903V13.3724C16.6903 13.5707 16.632 13.7118 16.5153 13.7959C16.3999 13.8813 16.2531 13.9239 16.0749 13.9239C15.9556 13.9239 15.8543 13.9083 15.771 13.8769C15.6889 13.8468 15.6229 13.8066 15.5729 13.7564C15.5229 13.7062 15.4864 13.6522 15.4633 13.5945L14.7055 13.6943C14.7389 13.8461 14.8113 13.9829 14.9229 14.1047C15.0344 14.2264 15.1844 14.3224 15.3729 14.3927Z" fill="#C3C3C3"/>
+                </svg></a>
+            </li>
+            <li>
+              <a href="#" onclick="showAlert()"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15.5C13.6569 15.5 15 14.1569 15 12.5C15 10.8431 13.6569 9.5 12 9.5C10.3431 9.5 9 10.8431 9 12.5C9 14.1569 10.3431 15.5 12 15.5ZM12 14.5C13.1046 14.5 14 13.6046 14 12.5C14 11.3954 13.1046 10.5 12 10.5C10.8954 10.5 10 11.3954 10 12.5C10 13.6046 10.8954 14.5 12 14.5Z" fill="#C3C3C3"/>
+                <path d="M15.5 9.5C15.7761 9.5 16 9.27614 16 9C16 8.72386 15.7761 8.5 15.5 8.5C15.2239 8.5 15 8.72386 15 9C15 9.27614 15.2239 9.5 15.5 9.5Z" fill="#C3C3C3"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 6.5C6.44772 6.5 6 6.94771 6 7.5V17.5C6 18.0523 6.44771 18.5 7 18.5H17C17.5523 18.5 18 18.0523 18 17.5V7.5C18 6.94772 17.5523 6.5 17 6.5H7ZM17 7.5H7V17.5H17V7.5Z" fill="#C3C3C3"/>
+                </svg></a>
+            </li>
+         </ul>
+      </div>
+    </div>
+    <div class="foot3">
+      Copyright JayDesign 2023.05
+    </div>
+    
+  </section>
+
+
+
+</body>
+
+</html>

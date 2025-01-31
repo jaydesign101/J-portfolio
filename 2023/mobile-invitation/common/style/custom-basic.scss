@@ -1,0 +1,20 @@
+html{
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.side-padding{
+    padding-left:16px;
+    padding-right:16px;
+}
+.inner{
+    @extend .side-padding;
+    width: 100%;
+    max-width: 480px;
+    min-width: 220px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    &.none{
+        padding: 0;
+    }
+}

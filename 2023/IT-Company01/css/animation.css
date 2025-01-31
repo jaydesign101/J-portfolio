@@ -1,0 +1,78 @@
+/* [s3] 애니메이션 : main 배너 text*/
+@keyframes down-up {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* [s7] 뒷배경 무한 슬라이드 애니메이션*/
+@keyframes dt-mewake-original {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    50.01%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes dt-mewake-clone {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+
+/* 스크롤 매직 혀과 */
+.back-to-position{
+    opacity: 0;
+    transition: 1s;
+}
+.back-to-position.to-slow{
+    transition: 3s;
+}
+
+.to-down{
+    transform: translateY(-30px);
+}
+.to-right{
+    transform: translateX(-30px);
+}
+.to-left{
+    transform: translateX(30px);
+}
+
+.show .back-to-position{
+    opacity: 1;
+}
+.show .back-to-position.to-down{
+    transform: translateY(0px);
+}
+
+.show .to-right, .show .to-left{
+    transform: translateX(0);
+}
+
+.show .back-to-position.delay-0 { transition-delay: 0s;}
+.show .back-to-position.delay-1 { transition-delay: .3s;}
+.show .back-to-position.delay-2 { transition-delay: .6s;}
+.show .back-to-position.delay-3 { transition-delay: .9s;}
+.show .back-to-position.delay-4 { transition-delay: 1.2s;}
+.show .back-to-position.delay-5 { transition-delay: 1.5s;}
+.show .back-to-position.delay-6 { transition-delay: 1.8s;}
+.show .back-to-position.delay-7 { transition-delay: 1.9s;}
+.show .back-to-position.delay-8 { transition-delay: 2.1s;}
+.show .back-to-position.delay-9 { transition-delay: 2.4s;}

@@ -1,0 +1,673 @@
+@import url("./../../../common/style/webFont.css");
+@import url("./../../../common/style/reset.css");
+@import "./../../../common/style/custom-basic.scss";
+
+
+$tc1 : #171717;
+$tc2 : #333333;
+$mc1 : #4A718A;
+$mc2 : #7398B0;
+$mc3 : #F4FBFF;
+$lc1 : #cccccc;
+$lc2 : #eeeeee;
+$bc1 : #FAFAFA;
+$col-space : 24px;
+
+
+// 버튼 디자인
+div[class*=ic--]{
+    background-color: #fff;
+    border-radius: 50%;
+    border: $lc2 1px solid;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    overflow: hidden;
+    img[src*=png]{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 헤더라인 디자인
+.headline-1{
+    color: $mc1;
+    text-align: center;
+    .main{
+        border-bottom: 1px solid $mc2;
+        padding-top: calc($col-space + 10px);
+        padding-bottom: 10px;
+        letter-spacing: .5rem;
+    }
+    .sub{
+        font-size: .875rem;
+        padding-top: .75rem;
+    }
+}
+
+body{
+    font-family: 'GowunBatang';
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $tc1;
+    position: relative;
+    overflow-x: hidden;
+    // 표지-1
+    .cover-1{
+        .inner{
+            .cover-top{
+                display: flex;
+                flex-direction: row;
+                gap: .5rem;
+                justify-content: space-between;
+                padding-top: $col-space;
+                padding-bottom: $col-space;
+                .name-group{
+                    font-size: 1.625rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.375rem;
+                    letter-spacing : .2rem;
+                    flex-shrink: 0;
+                }
+                .info{
+                    flex-grow: 1;
+                    text-align: right;
+                    font-size: 0.875rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    color : $tc2;
+                    letter-spacing : .1em;
+                    .date{
+                        color: $tc2;
+                    }
+                    .location{
+                        color: $mc1;                        
+                    }
+                } 
+            }
+            .cover-img{
+                img{
+                    width: 100%;
+                }
+            }
+            .cover-title{
+                text-align: center;
+                width: 100%;
+                color: $mc1;
+                padding-top: $col-space;
+                padding-bottom: $col-space;
+                .main-title{
+                    font-size: 1.625rem;
+                    border-bottom: 1px $mc2 solid;
+                    display: flex;
+                    justify-content:space-evenly;
+                }
+                .sub-title{
+                    font-size: 1rem;
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+    // 메시지
+    .message-1{
+        overflow: hidden;
+        .inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            position: relative;    
+            .text{
+                text-align: center;
+                .deco-img{
+                    padding: 1.25rem 0;
+                    img{
+                        width: 100px;
+                    }
+                }
+            }
+            .line{
+                &::after{
+                    content: '';
+                    display: block;
+                    background-color: $mc2;
+                    width: 1px;
+                    height: 100px; 
+                }
+            }
+            .person-img{
+                position: absolute;
+                width: 180px;
+                &.groom{
+                    top:0px;
+                    left:-40px;
+                }
+                &.bride{
+                    bottom:80px;
+                    right:-40px;
+                }
+            }
+            .name{
+                z-index: 1;
+                display: flex;
+                width: 100%;
+                text-align: center;
+                gap: .5rem;
+                line-height: 2rem;
+                font-size: 1.125rem;
+                
+                span{
+                    font-size: .875rem;
+                }
+                &>div{
+                    flex: 1;
+                    word-break: keep-all;
+                }
+            }
+        }
+    }
+    // 분리자
+    .devider-1{
+        .inner{
+            padding-top: $col-space;
+            padding-bottom: $col-space;
+            display: flex;
+            gap: 8px;
+            .box{
+                width: 6px;
+                height: 6px;
+                background-color: $mc2;
+                flex-shrink: 0;
+                transform: rotate(45deg);
+            }
+            &::before, &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $mc2;
+                translate: 0 3px;
+            }
+        }
+    }
+    // 연락
+    .call-1{
+        .inner{
+            .heroine{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.25rem;
+                padding-bottom: $col-space;
+                &>div{
+                    transform: translateX(-1rem);
+                    display: flex;
+                    align-items: center;
+                    p{
+                        padding: 0 2.25rem;
+                        word-break: keep-all;
+                        span{
+                            font-weight: 600;
+                        }
+                    }
+                    .ic--call{
+                        margin-right: 1.25rem;
+                        
+                    }
+                }
+            }            
+            .parent{
+                background-color: $bc1;
+                padding-top: $col-space;
+                padding-bottom: $col-space;
+                // background-color: $bc1;
+                .title{
+                    text-align: center;
+                    span{
+                        font-weight: 600;
+                    }
+                }
+                .address{
+                    display: flex;
+                    &>div{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap : 1rem;
+                        margin-top: $col-space;
+                        &.groom{
+                            border-right: 1px $lc1 solid;
+                        }
+                        .sub-title{
+                            background-color: $lc2;
+                            font-size: .875rem;
+                            width: fit-content;
+                            padding: .125rem 1.25rem;
+                            border-radius: 1.25rem;
+                        }
+                        
+                        .father, .mother{
+                            p{
+                                transform: translateX(.25rem);
+                                span{
+                                    font-weight: 700;
+                                }
+                            }
+                            .ic-group{
+                                margin-top: .75rem;
+                                display: flex;
+                                gap: 1.125rem;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+    // 예식 날짜
+    .date-1{
+        // background-color: $mc3;
+        .inner{
+            background-color: $mc3;
+            padding-top: $col-space;
+            padding-bottom: $col-space;
+            .title{
+                margin-bottom: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .title-text{
+                    letter-spacing: .125rem;
+                }
+                #title-month{
+                    font-size: 1.5rem;
+                }
+            }
+            #calendar{
+                color: $mc1;
+     
+                .week--group{
+                    border-top: $mc2 solid 1px;
+                    border-bottom: $mc2 solid 1px;
+                    margin-bottom: .5rem;
+                }
+                div[class*=--group]{
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    width: 100%;
+                    justify-items: center;
+                    div[class*=--item]{
+                        margin-top: .25rem;
+                        margin-bottom: .25rem;
+                        width: min-content;
+                        box-sizing: border-box;
+                        padding: .25rem;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        aspect-ratio: 1;
+                        &.focus{
+                            background-color: $mc1;
+                            border-radius: 50%;
+                            font-weight: 700;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 오시는 길
+    .come-1{
+        .inner{
+            .address{
+                display: flex;
+                justify-content:space-between;
+                gap: .25rem;
+                padding-top: calc($col-space / 2);
+                padding-bottom: $col-space;
+                p{
+                    &:nth-child(1){
+                        font-weight: 700;
+                        margin-bottom: .25rem;
+                    }
+                }
+            }
+            #map{
+                width: 100%;
+                background-color: $lc1;
+                aspect-ratio: 1.8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+            .icon-group{
+                display: flex;
+                justify-content:space-evenly;
+                padding: 16px 4%;
+                background-color: $bc1;
+                box-sizing: border-box;
+                gap: .25rem;
+                .item{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    align-items: center;
+                    p{
+                        font-size: .75rem;
+                        text-align: center;
+                    }
+                }
+
+            }
+            .how-come{
+                .item{
+                    border-bottom: 1px solid $lc2;
+                    padding: 1rem 0;
+                    &:last-child{
+                        border-bottom: 0px solid transparent;
+                    }
+                    .title{
+                        padding-bottom: .5rem;
+                        font-weight: 700;
+                    }
+                    p{
+                        font-size: .875rem;
+                    }
+                }
+            }
+        }
+    }
+    // account (계좌)
+    .account-1{
+        .inner{
+            margin-top: -24px;
+            .flower-img-con{
+                transform: translateY(40%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 66px;
+                }
+            }
+            .account{
+                background-color: $mc3;
+                border-top-left-radius: 60px;
+                border-top-right-radius: 60px;
+                @extend .side-padding;
+                padding-top: $col-space;
+                padding-bottom: calc($col-space * 2);
+                display: flex;
+                flex-direction: column;
+                gap: $col-space;
+                
+                .send{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: .5rem;
+                    .groom, .bride{
+                        flex: 1;
+                        text-align: center;
+                        p{
+                            margin-bottom: .5rem;
+                            span{
+                                font-weight: 700;
+                            }
+                        }
+                        .send-btn{
+                            background-color: #fff;
+                            border: 1px solid $lc2;
+                            padding: .5rem 0;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .wedding-img-con{
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .last-text{
+                    text-align: center;
+                    color: $mc1;
+                }
+            }
+        }
+    }
+    // 갤러리
+    .gallery-1{
+        .inner{
+            .gallery-1-slide{
+                margin-top: 10px;
+                width: 100%;
+                background-color: $lc2;
+                position: relative;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        box-sizing: border-box;
+                        width: 100%;
+                        aspect-ratio: 1;
+                        overflow: hidden; 
+                        position: relative;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit:cover;
+                        }
+                    }
+                }
+                .move-btn{
+                    background-color: rgba(0,0,0,.3);
+                    width: min-content;
+                    position:absolute;
+                    top: 50%;
+                    translate: 0 -50%;
+                    z-index: 1;
+                    &.swiper-button-next{
+                        right: 0;
+                    }
+                }
+                .swiper-pagination{
+                    position: absolute;
+                    width: 100%;
+                    top:0;
+                    left:0;
+                    z-index: 1;
+                    background-color: $mc3;
+                    height: 2px;
+                    .swiper-pagination-progressbar-fill{
+                        background: $mc2;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                        transform-origin: left top;
+                    }
+                }
+            }
+        }
+    }
+    // movie (동영상)
+    .movie-1{
+        video{
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    }
+    // last-tell
+    .last-tell{
+        .inner{
+            padding-top: $col-space;
+            padding-bottom: $col-space;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 240px;
+            }
+        }
+    }
+    // share (공유)
+    .share{
+        .inner{
+            display: flex;
+            justify-content: space-around;
+            background-color: $bc1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            .item{
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: center;
+                gap: .5rem;
+                &:nth-child(1){
+                    border-right: 1px solid $lc1;
+                }
+                p{
+                    font-size: .75rem;
+                }
+            }
+        }
+    }
+    // footer
+    .footer{
+        .inner{
+            background-color: #333333;
+            p{
+                font-weight: 700;
+                color: $lc1;
+                padding: 18px 0;
+                text-align: center;
+                letter-spacing: .5rem;
+            }
+        }
+        
+        
+    }
+    // account-modal (계좌 모달)
+    #dim{
+        display: none;
+        background-color: rgba(0,0,0,.3);
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 1000;
+    }
+    .account-modal-1{
+        display: none;
+        .modal{
+            @extend .inner;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: .5rem 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            border-radius: 10px;
+            width: 90%;            
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: .25rem;
+                border-bottom: 1px solid $lc1;
+                p{
+                    color: $tc1;
+                }
+                .ic--close{
+                    border-radius: 0;
+                    border: 0 solid $tc1;
+                }
+            }
+            .content{
+                padding-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding-bottom: 1rem;
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    .item-top{
+                        display: flex;
+                        align-items:baseline;
+                        gap: .5rem;
+                        flex-wrap: wrap;
+                        .title{
+                            font-weight: 700;
+                        }
+                        .name{
+                            font-size: .875rem;
+                            color: $tc2;
+                        }
+                    }
+                    .item-bottom{
+                        display: flex;
+                        gap: .5rem;
+                        flex-wrap: wrap;
+                        white-space : nowrap;
+                        font-size: .875rem;
+                        .acc-num{
+                            display: flex;
+                            flex-grow: 1;
+                            flex-wrap: wrap;
+                            background-color: $lc2;
+                            color: $tc2;
+                            padding: .375rem .5rem;
+                            align-items: center;
+                            .bank{
+                                padding-right: 1rem;
+                            }
+                        }
+                        .copy-btn{
+                            background-color: $mc1;
+                            padding: .375rem 1rem;
+                            color: #fff;
+                            cursor: pointer;
+                            text-align: center;                           
+                                       
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+
+
+
+

@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.side-padding, .inner {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.inner {
+  width: 100%;
+  max-width: 480px;
+  min-width: 220px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.inner.none {
+  padding: 0;
+}/*# sourceMappingURL=custom-basic.css.map */

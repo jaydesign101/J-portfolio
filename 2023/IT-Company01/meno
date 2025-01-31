@@ -1,0 +1,96 @@
+1. git 시작하기
+
+1-1. git 저장소 생성
+git init
+
+1-2. git 이름 및 이메일 등록
+git config --global user.name >> 이름
+git config --global user.email >> 이메일
+
+
+--------------------------------------
+
+
+2. git 코드 수정 > 커밋 > 푸시
+
+2-1. 수정 코드 Staging 영역에 추가
+git add .
+
+2-2. 수정 코드 커밋 : local repository 변경 작업
+git commit -m "메시지"
+
+2-3. 원격 repository 연결 및 전송
+git remote add origin (연격 저장소 주소 github URL) >>> 처음 할 때만
+git push origin master
+
+
+--------------------------------------
+
+
+3. git 다른 로컬B 에서 시작하기
+
+3-1. 현재 로그인된 계정 확인
+git config user.name
+git config user.email
+
+3-2. 변경하고자 하는 이름과 계정 입력
+git config --global user.name >> 이름
+git config --global user.email >> 이메일
+
+3-3. git 복사
+git clone (연격 저장소 주소 github URL)
+
+3-4. 작업 > 커밋 > 푸시
+git add .
+git commit -m "메시지"
+git push origin master
+
+
+--------------------------------------
+
+
+4. 다른 로컬에서 다른 내용으로 커밋했을 경우
+- 다른 로컬 B 에서 푸시한 후, 기존 로컬 A가 수정후 커밋했을 때 (B가 커밋한 내용이 다름)
+
+4-1. 원격 저장소에서 필요한 파일을 가져오기 + 병합 (초반에 실행)
+git pull origin master >> 이미 B가 코드를 수정했면 A와 코드가 다르기 때문에 에러가 난다.
+
+4-2. 수정사항 임시 공간 옮기기
+git stash
+
+4-3. 원격 저장소에서 필요한 파일 가져오기
+git pull origin master
+
+4-4. 원격 저장소에서 가져온 파일과 임시 저장한 코드 병합
+git stash pop
+
+
+fetch??
+
+--------------------------------------
+
+
+* 기타
+1. git 상태 확인 (add 내역 확인)
+git status
+
+2. 커밋 이력 확인
+git log
+git log (--oneline) >> 한줄 출력
+
+3. 원격 저장소 url 확인하기
+git remote -v
+
+4. 원격 저장소 URL 변경하기
+git remote set-url origin URL
+
+5. 기존 로그인 정보 삭제
+제어판 > 사용자 계정 > 자격 증명 관리자 > Windows 자격 증명 >> git >> 제거
+
+
+-------------------------------
+git 에러 해결
+
+1. [Git]  ! [rejected] master -> master (non-fast-forward) 해결 방법
+>>> git push origin +master
+- 브랜치 이름 앞에 + 붙어 push
