@@ -1,5 +1,5 @@
-@import url("./../../../common/style/webFont.css");
-@import url("./../../../common/style/reset.css");
+@import url("./../../common/style/webFont.css");
+@import url("./../../common/style/reset.css");
 html {
   font-size: 16px;
   background-color: #fff;
