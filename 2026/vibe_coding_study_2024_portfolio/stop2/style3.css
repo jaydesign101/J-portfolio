@@ -1,0 +1,765 @@
+/* ==========================================================================
+   NORMALIZED RESPONSIVE STYLES (<= 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    * {
+    /* empty */
+}
+
+    :root {
+    /* empty */
+}
+
+    html {
+    /* empty */
+}
+
+    body {
+    /* empty */
+}
+
+    img {
+    /* empty */
+}
+
+    ul {
+    /* empty */
+}
+
+    ol {
+    /* empty */
+}
+
+    a {
+    /* empty */
+}
+
+    button {
+    /* empty */
+}
+
+    .section-title {
+        /* empty */
+    }
+    .section-title h3 {
+        font-size: 38px;
+}
+
+    .section-title .title-star {
+        right: -36px;
+        top: -24px;
+        width: 38px;
+        height: 38px;
+}
+
+    .inner-box {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .sec-header {
+    /* empty */
+}
+
+    .sec-header .inner-box {
+        height: 46px;
+    }
+
+    .sec-header .logo-text {
+        width: 240px;
+    }
+
+    .sec-header .gnb {
+        position: fixed;
+        left: -100%;
+        top: 46px;
+        width: 100%;
+        height: calc(100vh - 46px);
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: 16px;
+        gap: 30px;
+        transition: var(--transition-normal);
+        border-top: var(--border-width-thin) solid var(--color-black);
+    }
+
+    .sec-header .menu-item {
+        width: 100%;
+        justify-content: center;
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .sec-header .menu-item .menu-label {
+    /* empty */
+}
+
+    .sec-header .menu-item.active {
+    /* empty */
+}
+
+    .sec-header .menu-item.active .menu-label {
+    /* empty */
+}
+
+    .sec-header .menu-item:hover {
+    /* empty */
+}
+
+    .sec-header .icon-check {
+    /* empty */
+}
+
+    .sec-header .slash-divider {
+        display: none;
+    }
+
+    .sec-header .slash-divider img {
+    /* empty */
+}
+
+    .sec-header .dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 10px 0;
+    }
+
+    .sec-header .menu-item:hover .dropdown-menu {
+        top: auto;
+    }
+
+    .sec-header .dropdown-link {
+    /* empty */
+}
+
+    .sec-header .dropdown-link:hover {
+    /* empty */
+}
+
+    .sec-header .dropdown-link.active {
+    /* empty */
+}
+
+    .sec-header .mini-logo-container {
+    /* empty */
+}
+
+    .sec-header .mini-logo {
+    /* empty */
+}
+
+    .sec-header .mobile-toggle-btn {
+        display: flex;
+        flex-shrink:0;
+        width: 24px;
+        height: 24px;
+    }
+
+    .sec-header .mobile-toggle-btn img {
+    /* empty */
+}
+
+    .sec-header .gnb.open {
+        left: 0;
+        gap: 0;
+    }
+
+    .sec-header .gnb.open .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: relative;
+    }
+
+    .sec-header .gnb.open .menu-item .menu-label {
+        text-indent: 24px;
+    }
+
+    .sec-header .gnb.open .menu-item .icon-check {
+        position: absolute;
+        top:12px;
+        left: 12px;
+    }
+
+    .sec-header .gnb.open .menu-item:nth-child(1):hover {
+        background-color: transparent;
+    }
+
+    .sec-header .gnb.open .menu-item .dropdown-link {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 16px;
+        gap:0;
+        font-weight: 500;
+        margin-left: 12px;
+        padding-left: 24px;
+    }
+
+    .sec-visual {
+        padding-top: 35px;
+}
+
+    .sec-visual .inner-box {
+    /* empty */
+}
+
+    .sec-visual .floating-shape {
+    /* empty */
+}
+
+    .sec-visual .shape-sphere-1 {
+        left: -40px;
+        top: -20px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .sec-visual .shape-triangle-1 {
+        right: 10px;
+        bottom: 40px;
+        width: 100px;
+        height:100px;
+    }
+
+    .sec-visual .shape-sphere-2 {
+        right: -10px;
+        bottom: 30px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .sec-visual .shape-heart-1 {
+        left: -30px;
+        bottom: 60px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .sec-visual .shape-square-1 {
+        right: -50px;
+        top: -50px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .sec-visual .shape-drawing {
+        display: none;
+    }
+
+    .sec-visual .shape-pencil {
+        display: none;
+    }
+
+    .sec-visual .visual-content {
+        gap: 24px;
+    }
+
+    .sec-visual .year-badge {
+        padding: 2px 16px 0px 16px;
+    }
+
+    .sec-visual .year-badge span {
+        font-size: 24px;
+    }
+
+    .sec-visual .main-title h2 {
+        font-size: 40px;
+    }
+
+    .sec-visual .main-title .underline-text {
+    /* empty */
+}
+
+    .sec-visual .sub-text {
+        font-size: 16px;
+    }
+
+    .sec-visual .cta-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sec-visual .cta-btn {
+        max-width: 180px;
+        width: 100%;
+    }
+
+    .sec-visual .btn-github {
+    /* empty */
+}
+
+    .sec-visual .cta-btn .btn-left {
+    /* empty */
+}
+
+    .sec-visual .cta-btn .btn-left img {
+    /* empty */
+}
+
+    .sec-visual .cta-btn .btn-left span {
+        font-size: 16px;
+    }
+
+    .sec-visual .btn-github .btn-left span {
+    /* empty */
+}
+
+    .sec-visual .btn-arrow {
+    /* empty */
+}
+
+    .sec-visual .cta-btn:hover {
+    /* empty */
+}
+
+    .sec-visual .cta-btn:active {
+    /* empty */
+}
+
+    .sec-visual .cta-btn:hover .btn-arrow {
+    /* empty */
+}
+
+    .sec-visual .effect-joo {
+        width: 60%;
+        min-width: 280px;
+        height: auto;
+        aspect-ratio: 546 / 237;
+    }
+
+    .sec-visual .effect-joo .joo-bg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sec-visual .joo-eyes-container {
+        left: 35%;
+        top: 35%;
+        width: 38%;
+        height: 50%;
+    }
+
+    .sec-visual .effect-joo .joo-eyes {
+    /* empty */
+}
+
+    .sec-visual .effect-joo .joo-star {
+        left: 77%;
+        top: 6%;
+        width: 18%;
+        height: 42%;
+    }
+
+    .sec-visual .main-title-box {
+    /* empty */
+}
+
+    .sec-visual .visual-content .main-title {
+    /* empty */
+}
+
+    .sec-visual .visual-content .sub-text {
+    /* empty */
+}
+
+    .sec-visual .btn-email {
+    /* empty */
+}
+
+    .divider-marquee {
+        padding: 6px 0;
+}
+
+    .divider-marquee .marquee-track {
+    /* empty */
+}
+
+    .divider-marquee span {
+        font-size: 20px;
+    padding: 0 2px;
+}
+
+    .sec-introduce {
+    /* empty */
+}
+    .sec-introduce .inner-box {
+        padding-top: 0px;
+        padding-bottom: 20px;
+}
+.sec-introduce .inner-box .intro-bg-star {
+        /* empty */
+}
+.sec-introduce .inner-box .intro-bg-doughnut{
+    display: none;
+}
+.sec-introduce .inner-box .intro-bg-star img,
+.sec-introduce .inner-box .intro-bg-doughnut img {
+    /* empty */
+}
+    .sec-introduce .title-about {
+    /* empty */
+}
+
+    .sec-introduce .intro-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+    }
+
+    .sec-introduce .grid-backdrop {
+    /* empty */
+}
+
+    .sec-introduce .intro-col-01 {
+        border-right: var(--border-width-thin) solid var(--color-black);
+    }
+
+    .sec-introduce .card-header-date {
+        min-height: auto;
+    }
+
+    .sec-introduce .line-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sec-introduce .year-num {
+    /* empty */
+}
+
+    .sec-introduce .line-divider-wrap {
+    /* empty */
+}
+
+    .sec-introduce .line-box-img {
+    /* empty */
+}
+
+    .sec-introduce .name-title {
+        max-width: 300px;
+    }
+    .sec-introduce .name-title span{
+        font-size: 35px;
+    }
+    .sec-introduce .card-body-intro {
+        /* empty */
+    }
+
+    .sec-introduce .intro-col-02 {
+    }
+
+    .sec-introduce .tmi-card-body {
+    /* empty */
+}
+.sec-introduce .tmi-title {
+    
+}
+    .sec-introduce .tmi-list {
+        justify-content:start;
+        height: auto;
+        gap:20px
+}
+
+    .sec-introduce .tmi-list li {
+    /* empty */
+}
+
+    .sec-introduce .tmi-list li .underline {
+    /* empty */
+}
+
+    .sec-introduce .mbti-card-body {
+        padding: 16px 38px 16px 24px;
+    }
+
+    .sec-introduce .mbti-title {
+    /* empty */
+}
+
+    .sec-introduce .icon-fire {
+    /* empty */
+}
+
+    .sec-introduce .mbti-text {
+    /* empty */
+}
+
+    .sec-introduce .mbti-text strong {
+    /* empty */
+}
+
+    .sec-introduce .mbti-result {
+        font-size: 32px;
+    }
+
+    .sec-introduce .intro-col-03 {
+        grid-column: span 1;
+        min-height: auto;
+        padding: 32px;
+    }
+
+    .sec-introduce .photo-border-wrap {
+    /* empty */
+}
+
+    .sec-introduce .profile-img {
+    /* empty */
+}
+
+    .sec-introduce .skills-section {
+    /* empty */
+}
+
+    .sec-introduce .skill-container {
+    /* empty */
+}
+.sec-introduce .skill-title-badge {
+    width: 240px;
+}
+    .sec-introduce .skill-title-badge span {
+        font-size: 26px;
+    }
+.sec-introduce .skill-card-main {
+    /* empty */
+}
+    .sec-introduce .skill-card-backdrop {
+    /* empty */
+}
+    .sec-introduce .skill-icons-grid {
+        padding: 34px 24px 30px 24px;
+        gap: 24px;
+    }
+
+    .sec-introduce .skill-icon-item {
+    /* empty */
+}
+
+    .sec-introduce .skill-icon-item:hover {
+    /* empty */
+}
+
+    .sec-introduce .skill-icon-item img {
+    /* empty */
+}
+
+
+    .sec-introduce .design-badge {
+    /* empty */
+}
+
+    .sec-introduce .develop-badge {
+    /* empty */
+}
+
+
+    .sec-introduce .design-skill-container {
+    /* empty */
+}
+
+    .sec-introduce .develop-skill-container {
+    /* empty */
+}
+
+    .sec-licence {
+    /* empty */
+}
+
+    .sec-licence .licence-top {
+    /* empty */
+}
+
+    .sec-licence .licence-top .inner-box {
+    /* empty */
+}
+
+    .sec-licence .title-licence {
+    /* empty */
+}
+    .sec-licence .effect-growth {
+
+    }
+    .sec-licence .tab-btn {
+        width: 100%;
+    }
+    .sec-licence .tab-btn:hover {
+    /* empty */
+}
+
+    .sec-licence .tab-btn.active {
+    /* empty */
+}
+
+    .sec-licence .badge-count {
+    /* empty */
+}
+
+    .sec-licence .licence-content {
+        padding: 80px 0;
+}
+
+    .sec-licence .licence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sec-licence .licence-card-item {
+    /* empty */
+}
+
+    .sec-licence .licence-card-item.hidden {
+    /* empty */
+}
+
+    .sec-licence .category-tag {
+    /* empty */
+}
+
+    .sec-licence .etc-tag {
+    /* empty */
+}
+
+    .sec-licence .develope-tag {
+    /* empty */
+}
+
+    .sec-licence .design-tag {
+    /* empty */
+}
+
+    .sec-licence .licence-name {
+    /* empty */
+}
+
+    .sec-licence .licence-info-bottom {
+    /* empty */
+}
+
+    .sec-licence .licence-info-bottom .date {
+    /* empty */
+}
+
+    .sec-licence .licence-info-bottom .location {
+    /* empty */
+}
+
+    .sec-licence .info-divider {
+    /* empty */
+}
+
+    .sec-licence .licence-content .inner-box {
+    /* empty */
+}
+
+    .sec-education {
+    /* empty */
+}
+
+    .sec-education .deco-bg-line {
+    /* empty */
+}
+
+    .sec-education .deco-line-left {
+    /* empty */
+}
+
+    .sec-education .deco-line-right {
+    /* empty */
+}
+
+    .sec-education .inner-box {
+        padding-top: 40px;
+        padding-bottom: 40px;
+}
+
+    .sec-education .title-education {
+        margin-bottom: 80px;
+}
+
+    .sec-education .curri-content {
+        gap: 80px;
+}
+
+    .sec-education .curri-list-box {
+        padding: 50px 20px 35px 20px;
+    }
+
+    .sec-education .curri-title-box {
+    /* empty */
+}
+
+    .sec-education .curri-title-box h4 {
+        font-size: 22px;
+    }
+
+    .sec-education .sub-title-box {
+    /* empty */
+}
+
+    .sec-education .curri-items-wrap {
+    /* empty */
+}
+    .sec-education .timeline-line {
+        left: 15px;
+    }
+    .sec-education .curri-item {
+        gap: 10px;
+    }
+    .sec-education .icon-wrap {
+        width: 32px;
+        height: 32px;
+    }
+    .sec-education .icon-wrap img {
+        width: 28px;
+        height: 28px;
+    }
+    .sec-education .curri-detail {
+    /* empty */
+}
+
+    .sec-education .curri-header {
+        flex-direction: column;
+}
+
+    .sec-education .title-school {
+    /* empty */
+}
+
+    .sec-education .title-school strong {
+        font-size: 18px;
+    }
+
+    .sec-education .title-school .school-name {
+    /* empty */
+}
+
+    .sec-education .curri-header .period {
+    /* empty */
+}
+
+    .sec-education .curri-detail .desc {
+    /* empty */
+}
+
+    .sec-education .main-curriculum {
+    /* empty */
+}
+
+    .sec-footer {
+    /* empty */
+}
+
+    .sec-footer p {
+    /* empty */
+}
+
+
+
+}
