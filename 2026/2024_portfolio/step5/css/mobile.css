@@ -1,0 +1,99 @@
+/* ==========================================================================
+   MOBILE STYLES (<= 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* --- BASE --- */
+  .section-title { margin-bottom: 0px; }
+  .section-title h3 { font-size: 30px; }
+  .section-title .title-star { right: -36px; top: -24px; width: 38px; height: 38px; }
+  .inner-box { padding-left: 16px; padding-right: 16px; }
+
+  /* --- HEADER --- */
+  .sec-header .inner-box { height: 46px; }
+  .sec-header .logo-text { width: 240px; }
+  .sec-header .gnb { position: fixed; left: -100%; top: 46px; width: 100%; height: calc(100vh - 46px); background-color: var(--color-white); flex-direction: column; padding: 16px; gap: 30px; transition: var(--transition-normal); border-top: var(--border-width-thin) solid var(--color-black); }
+  .sec-header .menu-item { width: 100%; justify-content: center; font-size: 24px; padding: 12px; }
+  .sec-header .slash-divider { display: none; }
+  .sec-header .dropdown-menu { position: static; transform: none; opacity: 1; visibility: visible; width: 100%; box-shadow: none; border: none; padding: 10px 0; }
+  .sec-header .menu-item:hover .dropdown-menu { top: auto; }
+  .sec-header .mobile-toggle-btn { display: flex; flex-shrink: 0; width: 24px; height: 24px; }
+  .sec-header .gnb.open { left: 0; gap: 0; }
+  .sec-header .gnb.open .menu-item { display: flex; flex-direction: column; align-items: start; position: relative; }
+  .sec-header .gnb.open .menu-item .menu-label { text-indent: 24px; }
+  .sec-header .gnb.open .menu-item .icon-check { position: absolute; top: 12px; left: 12px; }
+  .sec-header .gnb.open .menu-item:nth-child(1):hover { background-color: transparent; }
+  .sec-header .gnb.open .menu-item .dropdown-link { font-family: 'Noto Sans KR', sans-serif; font-size: 16px; gap: 0; font-weight: 500; margin-left: 12px; padding-left: 24px; }
+
+  /* --- VISUAL --- */
+  .sec-visual { padding-top: 35px; }
+  .sec-visual .inner-box { padding-top: 100px; padding-bottom: 100px; }
+  .sec-visual .shape-sphere-1 { left: -40px; top: -20px; width: 140px; height: 140px; }
+  .sec-visual .shape-triangle-1 { right: 10px; bottom: 40px; width: 100px; height: 100px; }
+  .sec-visual .shape-sphere-2 { right: -10px; bottom: 30px; width: 60px; height: 60px; }
+  .sec-visual .shape-heart-1 { left: -30px; bottom: 60px; width: 110px; height: 110px; }
+  .sec-visual .shape-square-1 { right: -50px; top: -50px; width: 140px; height: 140px; }
+  .sec-visual .shape-drawing { display: none; }
+  .sec-visual .shape-pencil { display: none; }
+  .sec-visual .visual-content { gap: 24px; }
+  .sec-visual .year-badge { padding: 2px 16px 0px 16px; }
+  .sec-visual .year-badge span { font-size: 24px; }
+  .sec-visual .main-title h2 { font-size: 40px; }
+  .sec-visual .sub-text { font-size: 16px; }
+  .sec-visual .cta-buttons { width: 100%; display: flex; justify-content: center; }
+  .sec-visual .cta-btn { max-width: 180px; width: 100%; }
+  .sec-visual .cta-btn .btn-left span { font-size: 16px; }
+  .sec-visual .effect-joo { width: 60%; min-width: 280px; height: auto; aspect-ratio: 546 / 237; }
+  .sec-visual .effect-joo .joo-bg { width: 100%; height: 100%; }
+  .sec-visual .joo-eyes-container { left: 35%; top: 35%; width: 38%; height: 50%; }
+  .sec-visual .effect-joo .joo-star { left: 77%; top: 6%; width: 18%; height: 42%; }
+
+  /* --- MARQUEE --- */
+  .divider-marquee { padding: 6px 0; }
+  .divider-marquee span { font-size: 20px; padding: 0 2px; }
+
+  /* --- INTRODUCE --- */
+  .sec-introduce .inner-box { padding-top: 0px; padding-bottom: 20px; }
+  .sec-introduce .inner-box .intro-bg-star { left: -50px; top: 30px; width: 150px; height: 150px; }
+  .sec-introduce .inner-box .intro-bg-doughnut { display: none; }
+  .sec-introduce .title-about { transform: translateX(-5%); }
+  .sec-introduce .intro-grid { grid-template-columns: 1fr; grid-template-rows: auto auto auto; }
+  .sec-introduce .intro-col-01 { border-right: var(--border-width-thin) solid var(--color-black); }
+  .sec-introduce .card-header-date { min-height: auto; }
+  .sec-introduce .line-wrap { display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .sec-introduce .name-title { max-width: 300px; }
+  .sec-introduce .name-title span { font-size: 35px; }
+  .sec-introduce .tmi-list { justify-content: start; height: auto; gap: 20px; }
+  .sec-introduce .mbti-card-body { padding: 16px 38px 16px 24px; }
+  .sec-introduce .mbti-result { font-size: 32px; }
+  .sec-introduce .intro-col-03 { grid-column: span 1; min-height: auto; padding: 32px; }
+  .sec-introduce .skills-section { margin-top: 60px; }
+  .sec-introduce .skill-title-badge { width: 240px; padding: 6px; }
+  .sec-introduce .skill-title-badge span { font-size: 20px; }
+  .sec-introduce .skill-icons-grid { padding: 34px 24px 30px 24px; gap: 24px; }
+  .sec-introduce .skill-icon-item { width: 60px; height: 60px; }
+  .sec-introduce .design-skill-container { margin-bottom: 60px; }
+
+  /* --- LICENCE --- */
+  .sec-licence .licence-top { padding: 40px 0; }
+  .sec-licence .tab-btn-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .sec-licence .tab-btn { font-size: 18px; }
+  .sec-licence .licence-content { padding: 80px 0; }
+  .sec-licence .licence-grid { grid-template-columns: 1fr; }
+  .sec-licence h4.licence-name { font-size: 18px; }
+
+  /* --- EDUCATION --- */
+  .sec-education .inner-box { padding-top: 40px; padding-bottom: 40px; }
+  .sec-education .title-education { margin-bottom: 60px; }
+  .sec-education .curri-content { gap: 60px; }
+  .sec-education .curri-list-box { padding: 50px 20px 35px 20px; }
+  .sec-education .curri-title-box { padding: 6px; top: -24px; }
+  .sec-education .curri-title-box h4 { font-size: 20px; }
+  .sec-education .timeline-line { left: 15px; }
+  .sec-education .curri-item { gap: 10px; }
+  .sec-education .icon-wrap { width: 32px; height: 32px; }
+  .sec-education .icon-wrap img { width: 28px; height: 28px; }
+  .sec-education .curri-header { flex-direction: column; }
+  .sec-education .title-school strong { font-size: 18px; }
+  .sec-education .curri-detail .desc { font-size: 14px; }
+}

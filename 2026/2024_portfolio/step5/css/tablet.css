@@ -1,0 +1,89 @@
+/* ==========================================================================
+   TABLET STYLES (<= 1200px)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  /* --- BASE --- */
+  .section-title { margin-bottom: 10px; }
+  .section-title h3 { font-size: 40px; }
+  .section-title .title-star { right: -40px; top: -28px; width: 42px; height: 42px; }
+
+  /* --- HEADER --- */
+  .sec-header .inner-box { padding: 16px 24px; }
+  .sec-header .logo-text { width: 240px; }
+  .sec-header .mini-logo-container { display: none; }
+  .sec-header .mobile-toggle-btn { width: 28px; height: 28px; }
+
+  /* --- VISUAL --- */
+  .sec-visual { padding-top: 65px; height: auto; min-height: 0; max-height: none; align-items: flex-start; }
+  .sec-visual .inner-box { padding-top: 120px; padding-bottom: 160px; }
+  .sec-visual .shape-sphere-1 { left: -50px; top: -30px; }
+  .sec-visual .shape-triangle-1 { right: 30px; bottom: 40px; }
+  .sec-visual .shape-sphere-2 { right: 0px; bottom: 50px; }
+  .sec-visual .shape-heart-1 { left: 0px; bottom: 50px; }
+  .sec-visual .shape-square-1 { right: -180px; top: -180px; }
+  .sec-visual .shape-drawing { display: none; }
+  .sec-visual .shape-pencil { display: none; }
+  .sec-visual .visual-content { display: flex; flex-direction: column; align-items: center; gap: 38px; }
+  .sec-visual .year-badge { padding: 4px 24px 2px 24px; }
+  .sec-visual .year-badge span { font-size: 36px; }
+  .sec-visual .effect-joo { position: relative; right: auto; top: auto; margin: 40px auto 0 auto; display: flex; justify-content: center; transform: translateY(-50px); }
+  .sec-visual .effect-joo .joo-eyes { transition: none; animation: joo-eyes-look 2.4s ease-in-out infinite; }
+  .sec-visual .visual-content .main-title { text-align: center; }
+  .sec-visual .visual-content .sub-text { text-align: center; }
+
+  /* --- KEYFRAMES --- */
+  @keyframes joo-eyes-look {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-12px); }
+    75% { transform: translateX(12px); }
+  }
+
+  /* --- MARQUEE --- */
+  .divider-marquee { padding: 7px 0; }
+  .divider-marquee span { font-size: 24px; padding: 0 4px; }
+
+  /* --- INTRODUCE --- */
+  .sec-introduce .inner-box { max-width: 100%; padding-top: 20px; padding-bottom: 50px; }
+  .sec-introduce .inner-box .intro-bg-star { left: -90px; top: 0px; width: 250px; height: 250px; }
+  .sec-introduce .inner-box .intro-bg-doughnut { right: -50px; bottom: -20px; }
+  .sec-introduce .title-about { transform: translateX(-20%); }
+  .sec-introduce .intro-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
+  .sec-introduce .intro-col-01 { border-bottom: none; }
+  .sec-introduce .card-header-date { padding: 24px 32px; }
+  .sec-introduce .name-title { max-width: 400px; }
+  .sec-introduce .name-title span { font-size: 40px; }
+  .sec-introduce .card-body-intro { padding: 48px 32px; }
+  .sec-introduce .intro-col-02 { border-right: var(--border-width-thin) solid var(--color-black); border-bottom: none; }
+  .sec-introduce .tmi-card-body { padding: 32px; }
+  .sec-introduce .tmi-title { margin-bottom: 24px; }
+  .sec-introduce .mbti-card-body { padding: 8px 38px 8px 24px; }
+  .sec-introduce .intro-col-03 { grid-column: span 2; }
+  .sec-introduce .photo-border-wrap { max-width: 400px; }
+  .sec-introduce .skill-container { flex-direction: column; align-items: stretch; }
+  .sec-introduce .skill-title-badge { width: 300px; padding: 8px; }
+  .sec-introduce .skill-icons-grid { width: 100%; padding: 50px 24px 40px 24px; }
+  .sec-introduce .design-badge { border-left: var(--border-width-thin) solid var(--color-black); border-bottom: none; }
+  .sec-introduce .develop-badge { border-right: var(--border-width-thin) solid var(--color-black); border-bottom: none; }
+
+  /* --- LICENCE --- */
+  .sec-licence .licence-top { padding: 60px 0; }
+  .sec-licence .licence-top .inner-box { max-width: 100%; }
+  .sec-licence .effect-growth { display: none; }
+  .sec-licence .tab-btn-list { margin-top: 28px; }
+  .sec-licence .tab-btn { width: 100%; }
+  .sec-licence .licence-content { padding: 100px 0; }
+  .sec-licence .licence-grid { grid-template-columns: 1fr 1fr; }
+  .sec-licence h4.licence-name { font-size: 22px; }
+
+  /* --- EDUCATION --- */
+  .sec-education .inner-box { padding-top: 60px; padding-bottom: 60px; }
+  .sec-education .curri-content { flex-direction: column; gap: 100px; }
+  .sec-education .curri-title-box { padding: 8px; top: -30px; }
+  .sec-education .curri-title-box h4 { font-size: 26px; }
+  .sec-education .icon-wrap { width: 36px; height: 36px; }
+  .sec-education .icon-wrap img { width: 36px; height: 36px; }
+
+  /* --- GO TO TOP --- */
+  .go-to-top-btn { display: none; }
+}
