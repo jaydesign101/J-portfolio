@@ -578,7 +578,8 @@
 }
 
     .sec-licence .licence-top .inner-box {
-    /* empty */
+        padding-top: 0;
+    padding-bottom: 0;
 }
 
     .sec-licence .title-licence {
@@ -587,6 +588,13 @@
     .sec-licence .effect-growth {
 
     }
+    .sec-licence .tab-btn-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 12px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .sec-licence .tab-btn {
         width: 100%;
     }
