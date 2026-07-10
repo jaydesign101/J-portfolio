@@ -1,16 +1,73 @@
 <!DOCTYPE html>
+
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+    @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap");
+    :root { --bg-1: #eef1ef; --bg-2: #e6ebe8; --surface: rgba(255, 255, 255, 0.72); --ink: #3a423e; --ink-soft: #5c6660; --muted: #7a847e; --line: rgba(58, 66, 62, 0.12); --accent: #6b7f74; --accent-soft: rgba(107, 127, 116, 0.1); --shadow: 0 18px 40px rgba(45, 55, 50, 0.06); --radius: 18px; --max: 720px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-height: 100vh; font-family: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", sans-serif; font-weight: 400; color: var(--ink); line-height: 1.65; background: var(--bg-1); -webkit-font-smoothing: antialiased; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: 0.35; background-image: linear-gradient(rgba(58, 66, 62, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 66, 62, 0.03) 1px, transparent 1px); background-size: 28px 28px; }
+    .page { position: relative; z-index: 1; width: min(100% - 2.5rem, var(--max)); margin: 0 auto; padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(4rem, 10vw, 6rem); }
+    .page > h2 { margin: 0 0 0.4rem; font-family: "Source Serif 4", "Apple SD Gothic Neo", serif; font-size: clamp(1.75rem, 4.5vw, 2.35rem); font-weight: 600; letter-spacing: -0.02em; color: var(--ink); line-height: 1.25; }
+    .page > ul { list-style: none; margin: 2.25rem 0 0; padding: 0; display: grid; gap: 1.15rem; }
+    .page > ul > li { background: var(--surface); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.35rem 1.4rem 1.25rem; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+    .page > ul > li:hover { border-color: rgba(107, 127, 116, 0.28); box-shadow: 0 22px 44px rgba(45, 55, 50, 0.08); }
+    .page > ul > li > h3 { margin: 0 0 0.85rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--line); font-size: 1rem; font-weight: 600; letter-spacing: 0.08em; text-transform: none; line-height: 1.3; }
+    .page > ul > li > h3 a { color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; transition: color 0.2s ease; }
+    .page > ul > li > h3 a:hover { color: var(--ink); }
+    .page > ul > li > h3 a::before { content: ""; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: currentColor; opacity: 0.55; flex-shrink: 0; }
+    .page > ul > li > ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+    .page > ul > li > ul > li a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.7rem 0.75rem; margin: 0 -0.35rem; border-radius: 10px; color: var(--ink-soft); text-decoration: none; font-size: 0.98rem; font-weight: 450; transition: background-color 0.2s ease, color 0.2s ease, padding-left 0.2s ease; }
+    .page > ul > li > ul > li a::after { content: "→"; font-size: 0.85rem; color: var(--muted); opacity: 0; transform: translateX(-4px); transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease; }
+    .page > ul > li > ul > li a:hover { background: var(--accent-soft); color: var(--ink); padding-left: 0.95rem; }
+    .page > ul > li > ul > li a:hover::after { opacity: 1; transform: translateX(0); color: var(--accent); }
+    .page > ul > li > ul > li a:focus-visible, .page > ul > li > h3 a:focus-visible { outline: 2px solid rgba(107, 127, 116, 0.45); outline-offset: 2px; }
+    @media (max-width: 640px) {
+      .page { width: min(100% - 1.5rem, var(--max)); padding-top: 2.4rem; }
+      .page > ul > li { padding: 1.15rem 1.05rem 1rem; border-radius: 14px; }
+      .page > ul > li > ul > li a { font-size: 0.95rem; padding: 0.78rem 0.65rem; }
+      .page > ul > li > ul > li a::after { display: none; }
+    }
+    @media (min-width: 900px) {.page > ul { gap: 1.25rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+  </style>
 </head>
+
 <body>
-  <h2>2023년 포트폴리오</h2>
-  <ul>
-    <li><a href="./2023/index.html">2023</a></li>
-    <li><a href="./2024/index.html">2024</a></li>
-  </ul>
+  <main class="page">
+    <h2>PORTFOLIO</h2>
+    <ul>
+      <li>
+        <h3>2023</h3>
+        <ul>
+          <li><a href="./2023/IT-Company01/index.html">IT 기업 고정형 홈페이지</a></li>
+          <li><a href="./2023/portfilio-2023/index.html">2023년 포트폴리오</a></li>
+          <li><a href="./2023/portfolio-edit_style/index.html">포트폴리오(에딧스타일)</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3>2024</h3>
+        <ul>
+          <li><a href="./2024/mobile-invitation/company/index.html">기업 초대장</a></li>
+          <li><a href="./2024/mobile-invitation/wedding/index.html">결혼식 청첩장</a></li>
+        </ul>
+      </li>
+      <li>
+        <h3>2026</h3>
+        <ul>
+          <li><a href="./2026/2024_portfolio/step5/index.html">2024 Welcome Portfolio</a></li>
+        </ul>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>
+
